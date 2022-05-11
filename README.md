@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ git clone git@github.com:JauJau088/leaderboard-with-api.git
 cd leaderboard-with-api
 ```
 
-- Once you clone the repo, go to the directory and run `npm install` command to get all necessary instalations.
+- Once you've cloned the repo and are inside the directory, run `npm install` command to get all necessary instalations.
 
 - Build/ watch project (not necessary, but might be needed in case you make some changes in the src folder).
 

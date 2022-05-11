@@ -1,33 +1,30 @@
-// Dummy data
-const data = [
-  {
-    name: 'Name',
-    score: 100,
-  },
-  {
-    name: 'Name',
-    score: 20,
-  },
-  {
-    name: 'Name',
-    score: 50,
-  },
-  {
-    name: 'Name',
-    score: 78,
-  },
-  {
-    name: 'Name',
-    score: 125,
-  },
-  {
-    name: 'Name',
-    score: 77,
-  },
-  {
-    name: 'Name',
-    score: 42,
-  },
-];
+// API
+// My game: Eclipse war 2256
+// My game id: dWUvZiAqWcoRfPMsUQDv
 
-export default data;
+import generateScores from './recent-score-generator.js';
+
+const data = [];
+
+export const fetchData = () => {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/')
+    .then((response) => response.json())
+    .then((json) => {
+      generateScores(json.result);
+    });
+};
+
+export const postData = (_name, _score) => {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/', {
+    method: 'POST',
+    body: JSON.stringify({
+      user: _name,
+      score: _score,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+};
