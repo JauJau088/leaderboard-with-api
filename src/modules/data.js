@@ -4,16 +4,16 @@
 
 import generateScores from './recent-score-generator.js';
 
-export const fetchData = () => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/')
-    .then((response) => response.json())
-    .then((json) => {
-      generateScores(json.result);
-    });
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/';
+
+export const fetchData = async () => {
+  const response = await fetch(url);
+  const json = await response.json();
+  generateScores(json.result);
 };
 
 export const postData = (_name, _score) => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/', {
+  fetch(url, {
     method: 'POST',
     body: JSON.stringify({
       user: _name,
