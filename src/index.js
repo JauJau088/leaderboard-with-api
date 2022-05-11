@@ -1,7 +1,6 @@
 // imports
 import './style.css';
 import { fetchData, postData } from './modules/data.js';
-import generateScores from './modules/recent-score-generator.js';
 
 // Generate scores
 fetchData();
@@ -19,5 +18,11 @@ container.onsubmit = (e) => {
   postData(name, score);
 
   container.reset();
-  generateScores(fetchData());
+};
+
+// Refresh button
+const refreshButton = document.querySelector('#refresh-btn');
+
+refreshButton.onclick = () => {
+  fetchData();
 };

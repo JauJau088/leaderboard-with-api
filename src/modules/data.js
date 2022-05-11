@@ -4,8 +4,6 @@
 
 import generateScores from './recent-score-generator.js';
 
-const data = [];
-
 export const fetchData = () => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/')
     .then((response) => response.json())
@@ -24,7 +22,5 @@ export const postData = (_name, _score) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+  });
 };
