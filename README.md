@@ -36,7 +36,7 @@ git clone git@github.com:JauJau088/leaderboard-with-api.git
 cd leaderboard-with-api
 ```
 
-- Once you've cloned the repo and are inside the directory, run `npm install` command to get all necessary instalations.
+- Once you've cloned the repo and are inside the directory, run `npm install` command to get all necessary installations.
 
 - Build/ watch project (not necessary, but might be needed in case you make some changes in the src folder).
 
