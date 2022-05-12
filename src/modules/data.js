@@ -10,19 +10,7 @@ export const fetchData = async () => {
   const response = await fetch(url);
   const json = await response.json();
 
-  const sorted = json.result.sort((a, b) => {
-    let ret;
-    if (parseInt(a.score, 10) > parseInt(b.score, 10)) {
-      ret = -1;
-    } else if (parseInt(a.score, 10) < parseInt(b.score, 10)) {
-      ret = 1;
-    } else {
-      ret = 0;
-    }
-    return ret;
-  });
-
-  renderScores(sorted);
+  renderScores(json.result);
 };
 
 export const postData = (_name, _score) => {

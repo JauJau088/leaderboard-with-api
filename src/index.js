@@ -29,12 +29,13 @@ refreshButton.onclick = () => {
 };
 
 // Prev-next
-document.addEventListener('click', (e) => {
-  if (e.target.matches('#prev')) {
-    generateScores(previous[0]);
-  }
+const prevButton = document.querySelector('#prev');
+const nextButton = document.querySelector('#next');
 
-  if (e.target.matches('#next')) {
-    generateScores(next[0]);
-  }
-});
+prevButton.onclick = () => {
+  generateScores(previous[0]);
+};
+
+nextButton.onclick = () => {
+  generateScores(next[0]);
+};
