@@ -1,5 +1,5 @@
 // imports
-import './style.css';
+import './style.scss';
 import { fetchData, postData } from './modules/data.js';
 
 // Generate scores
