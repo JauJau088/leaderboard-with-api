@@ -1,0 +1,192 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Variables */
+$max-width: 600px;
+$padding-li: 0.5em 0.8em;
+
+$color-main: #d00000;
+$color-main-dark: #9d0208;
+$color-secondary: #f48c06;
+$color-secondary-dark: #e85d04;
+$color-secondary-light: #faa307;
+$color-background: #370617;
+$color-background-dark: #03071e;
+
+/* Global */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rajdhani', Arial, sans-serif;
+  color: white;
+  background-color: rgba($color: $color-background, $alpha: 0.8);
+}
+
+input {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  padding: $padding-li;
+  border: 3px solid $color-background;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-secondary-light;
+  border: none;
+  border-radius: 5px;
+  padding: 0 4px;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+button:hover {
+  background-color: $color-secondary;
+}
+
+button:active {
+  background-color: $color-secondary-dark;
+}
+
+h1 {
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 26px;
+}
+
+ul {
+  list-style: none;
+}
+
+.icon {
+  font-family: 'Material Icons', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Main */
+.main-container {
+  margin: auto;
+  margin-top: 30px;
+  background-color: $color-main;
+  width: $max-width;
+  padding: 10px;
+}
+
+header {
+  margin: auto;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-scores-container-wrapper {
+  width: 100%;
+  max-width: 300px;
+}
+
+.recent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scores {
+  border: 3px solid $color-background;
+
+  li {
+    display: flex;
+    padding: $padding-li;
+  }
+
+  li > :first-child {
+    min-width: 25px;
+  }
+
+  li > :nth-child(2) {
+    flex: 1;
+  }
+
+  li:nth-child(even) {
+    background-color: $color-main-dark;
+  }
+}
+
+.nav-container {
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+
+  a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: $color-secondary;
+  }
+
+  a:active {
+    color: $color-secondary-dark;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
+.table-title {
+  padding-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+.button {
+  padding: 7px 15px;
+  font-size: 14px;
+}
+
+// Desktop
+@media screen and (min-width: 768px) {
+  .main-container {
+    padding: 30px;
+  }
+
+  .nav-container {
+    width: 60%;
+  }
+}
