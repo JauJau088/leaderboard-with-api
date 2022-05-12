@@ -7,9 +7,10 @@
 ## Built With
 
 - HTML
-- CSS
+- SCSS
 - JavaScript (ES6)
 - Webpack
+- REST API
 
 ## Live Demo
 
