@@ -28,9 +28,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   font-family: 'Rajdhani', Arial, sans-serif;
   color: white;
@@ -83,6 +80,8 @@ ul {
 
 /* Main */
 .main-container {
+  margin: auto;
+  margin-top: 30px;
   background-color: $color-main;
   width: $max-width;
   padding: 10px;
@@ -104,7 +103,7 @@ header {
   flex-direction: column;
 }
 
-.recent-scores-container {
+.recent-scores-container-wrapper {
   width: 100%;
   max-width: 300px;
 }
@@ -135,6 +134,33 @@ header {
   }
 }
 
+.nav-container {
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+
+  a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: $color-secondary;
+  }
+
+  a:active {
+    color: $color-secondary-dark;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
 .table-title {
   padding-bottom: 20px;
 }
@@ -158,5 +184,9 @@ header {
 @media screen and (min-width: 768px) {
   .main-container {
     padding: 30px;
+  }
+
+  .nav-container {
+    width: 60%;
   }
 }

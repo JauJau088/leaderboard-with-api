@@ -2,7 +2,7 @@
 // My game: Eclipse war 2256
 // My game id: dWUvZiAqWcoRfPMsUQDv
 
-import generateScores from './recent-score-generator.js';
+import renderScores from './score-renderer.js';
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dWUvZiAqWcoRfPMsUQDv/scores/';
 
@@ -22,7 +22,7 @@ export const fetchData = async () => {
     return ret;
   });
 
-  generateScores(sorted);
+  renderScores(sorted);
 };
 
 export const postData = (_name, _score) => {

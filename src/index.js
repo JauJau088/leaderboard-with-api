@@ -1,6 +1,7 @@
 // imports
 import './style.scss';
 import { fetchData, postData } from './modules/data.js';
+import { previous, next, generateScores } from './modules/score-renderer.js';
 
 // Generate scores
 fetchData();
@@ -26,3 +27,14 @@ const refreshButton = document.querySelector('#refresh-btn');
 refreshButton.onclick = () => {
   fetchData();
 };
+
+// Prev-next
+document.addEventListener('click', (e) => {
+  if (e.target.matches('#prev')) {
+    generateScores(previous[0]);
+  }
+
+  if (e.target.matches('#next')) {
+    generateScores(next[0]);
+  }
+});
