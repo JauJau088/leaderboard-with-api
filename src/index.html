@@ -32,8 +32,22 @@
       <div class="add-score-container container">
         <h2 class="table-title">Add your score</h2>
         <form class="form" action="#">
-          <input type="text" name="name" id="input-name" placeholder="Your name" required>
-          <input type="number" name="score" id="input-score" placeholder="Your score" required>
+          <input
+            type="text"
+            name="name"
+            id="input-name"
+            placeholder="Your name"
+            maxlength="20"
+            pattern="^[^\s][-._!?\sA-Za-z0-9]+$"
+            required>
+          <input
+            type="number"
+            name="score"
+            id="input-score"
+            placeholder="Your score"
+            min="0"
+            max="9999"
+            required>
           <button class="button" type="submit">Submit</button>
         </form>
       </div>

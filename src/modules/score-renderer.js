@@ -32,6 +32,7 @@ export const generateScores = (_startIndex = 0) => {
 
 const renderScores = (_data) => {
   data = _data;
+  data = data.filter((d) => d.score < 9999 || d.score > 0);
 
   const sorted = data.sort((a, b) => {
     let ret;
