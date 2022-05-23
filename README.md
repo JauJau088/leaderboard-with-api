@@ -58,7 +58,7 @@ npm start
 
 - GitHub: [@JauJau088](https://github.com/JauJau088)
 - Twitter: [@jaujauj](https://twitter.com/jaujauj)
-- LinkedIn: [Jauhari Alafi](https://linkedin.com/in/jauhari-alafi-7295b821a/)
+- LinkedIn: [Jauhari Alafi](https://linkedin.com/in/jauhari-alafi/)
 
 ## 🤝 Contributing
 
